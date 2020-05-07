@@ -1,3 +1,45 @@
+@font-face {
+  font-family: "Roboto-Medium";
+  font-weight: 500;
+  font-style: normal;
+  src: url "../fonts/Roboto-Medium.woff2" formst "woff2", url("../fonts/Roboto-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  font-weight: 400;
+  font-style: normal;
+  src: url "../fonts/Roboto-Regular.woff2" formst "woff2", url("../fonts/Roboto-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "RobotoCondensed-Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: url "../fonts/RobotoCondensed-Bold.woff2" formst "woff2", url("../fonts/RobotoCondensed-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "RobotoCondensed-Regular";
+  font-weight: 400;
+  font-style: normal;
+  src: url "../fonts/RobotoCondensed-Regular.woff2" formst "woff2", url("../fonts/RobotoCondensed-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Dosis-Light";
+  font-weight: 300;
+  font-style: normal;
+  src: url "../fonts/Dosis-Light.woff2" formst "woff2", url("../fonts/Dosis-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Dosis-Medium";
+  font-weight: 500;
+  font-style: normal;
+  src: url "../fonts/Dosis-Medium.woff2" formst "woff2", url("../fonts/Dosis-Medium.woff") format("woff");
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -8,9 +50,17 @@ html {
           box-sizing: inherit;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
 body {
   min-width: 320px;
   overflow-x: hidden;
+  font-family: "Roboto-Regular", "Arial", "sans-derif";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
 }
 
 .container {
@@ -29,7 +79,7 @@ body {
   }
 }
 
-@media (min-width: 1024) {
+@media (min-width: 1024px) {
   .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -37,7 +87,7 @@ body {
   }
 }
 
-@media (min-width: 1024) {
+@media (min-width: 1440px) {
   .container {
     max-width: 1320px;
   }
@@ -79,7 +129,7 @@ body {
   }
 }
 
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .logo__link {
     margin-left: 0px;
   }
@@ -107,4 +157,37 @@ body {
   left: 15px;
   -webkit-box-shadow: 0 4px 0 0 #2b4074, 0 8px 0 0 #2b4074;
           box-shadow: 0 4px 0 0 #2b4074, 0 8px 0 0 #2b4074;
+}
+
+@media (min-width: 1440px) {
+  .menu__btn .logo__link {
+    margin-right: 90px;
+  }
+}
+
+.head {
+  background-image: url(../images/bg-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+          background-size: cover;
+  min-height: 193px;
+}
+
+.top-slider {
+  background: rgba(33, 33, 33, 0.5);
+}
+
+.top-slider__item {
+  color: #fff;
+  text-align: center;
+}
+
+.top-slider__titile {
+  font-family: "RobotoCondensed-Regular";
+  line-height: 28px;
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 36px 0 28px;
 }
