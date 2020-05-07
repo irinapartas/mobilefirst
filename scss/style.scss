@@ -13,6 +13,15 @@ h1,h2,h3,h4,h5,h6 {
     margin: 0;
 }
 
+ul,
+li
+{
+margin: 0;
+padding: 0;
+list-style: none;
+}
+button
+
     body {
         min-width: 320px;
         overflow-x: hidden;
@@ -111,16 +120,22 @@ position: relative;
 .head {
     background-image: url(../images/bg-img.jpg);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: -64px center;
     background-size: cover;
     min-height: 193px;
 }
+@media (min-width: 640px){
+    .head{
+        min-height: 386px;
+        background-position: -162px center;
+    }  
 
 .top-slider {
     background: rgba(33, 33, 33, 0.5);
 &__item {
     color: #fff;
     text-align: center;
+    min-height: 193px;
 }
 &__titile {
     font-family: "RobotoCondensed-Regular";
@@ -129,7 +144,94 @@ position: relative;
     font-weight: 400;
     text-transform: uppercase;
     padding: 36px 0 28px;
+    max-width: 243px;
+    margin: 0 auto;
+    position: 
+    &::after {
+      content: "";
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+height: 8px;
+width: 61px;
+margin: 0 auto;
+background-color: $text-color;
+    }
 }
+&__btn{
+    display: none;
+}
+
+.slick-dots{
+display: flex;
+justify-content: center;
+position: absolute;
+bottom: 20px;
+left: 0;
+right: 0;
+.slick-active {
+    background-color: transparent;
+    border: 1px solid #476e40;
+}
+button{
+    font-size: 0;
+    border: none;
+    background-color: $accent;
+    padding: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+}
+}
+@media (min-width: 640px){
+    .top-slider{
+        &__item {
+            min-height: 386px;
+        }
+        &__title {
+            font-size: 60px;
+            line-height: 60px;
+            padding: 50px 0 15px;
+            margin: 0 auto 30px;
+            max-width: 520px;
+        }
+        &__btn {
+           display: block; 
+           margin-bottom: 0 auto 113px;
+           font-size: 18px;
+           background-color: $accent;
+           color: $bg-color;
+           padding: 16px 45px;
+           border: none;
+           border-radius: 3px;
+        }
+        .slick-dots {
+            bottom: 50px;
+        }
+        .slick-arrow {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            border: none;
+            right: 0;
+            z-index: 5;
+        }
+        .slick-prev{
+            background-color: $accent;
+            top: calc(50% - 56px);
+        }
+        .slick-next{
+            background-color: $bg-color;
+            bottom: calc(50% - 56px);
+        }
+    } 
+
+
+
+
 }
 
 

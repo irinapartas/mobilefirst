@@ -54,6 +54,13 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 body {
   min-width: 320px;
   overflow-x: hidden;
@@ -181,6 +188,7 @@ body {
 .top-slider__item {
   color: #fff;
   text-align: center;
+  min-height: 193px;
 }
 
 .top-slider__titile {
@@ -190,4 +198,33 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   padding: 36px 0 28px;
+  max-width: 243px;
+  margin: 0 auto;
+}
+
+.top-slider .slick-dots {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+
+.top-slider .slick-dots button {
+  font-size: 0;
+  border: none;
+  background-color: #2b4074;
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  margin: 0 10px;
 }
