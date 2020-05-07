@@ -20,7 +20,12 @@ margin: 0;
 padding: 0;
 list-style: none;
 }
-button
+button {
+    padding: 0;
+}
+p {
+    margin: 0;
+}
 
     body {
         min-width: 320px;
@@ -120,15 +125,10 @@ position: relative;
 .head {
     background-image: url(../images/bg-img.jpg);
     background-repeat: no-repeat;
-    background-position: -64px center;
+    background-position: center center;
     background-size: cover;
     min-height: 193px;
 }
-@media (min-width: 640px){
-    .head{
-        min-height: 386px;
-        background-position: -162px center;
-    }  
 
 .top-slider {
     background: rgba(33, 33, 33, 0.5);
@@ -146,7 +146,7 @@ position: relative;
     padding: 36px 0 28px;
     max-width: 243px;
     margin: 0 auto;
-    position: 
+    position: absolute;
     &::after {
       content: "";
 position: absolute;
@@ -158,6 +158,9 @@ width: 61px;
 margin: 0 auto;
 background-color: $text-color;
     }
+}
+&__text {
+    display: none;
 }
 &__btn{
     display: none;
@@ -200,6 +203,7 @@ button{
         }
         &__btn {
            display: block; 
+           font-weight: 500;
            margin-bottom: 0 auto 113px;
            font-size: 18px;
            background-color: $accent;
@@ -226,14 +230,70 @@ button{
         .slick-next{
             background-color: $bg-color;
             bottom: calc(50% - 56px);
+
         }
     } 
-
-
-
-
 }
-
-
+@media (min-width: 768px){
+.top-slider{
+    &__item {
+        min-height: 465px;
+    }
+    &__titile {
+        padding: 87px 0 0;
+        margin: 0 auto 0;
+        max-width: 520px;
+        &::after{
+            display: none;
+        }
+    }
+    &__text {
+        padding: 25px 0 32px;
+        font-family: "RobotoCondensed-Regular";
+        line-height: 20px;
+        font-size: 18px;
+        font-weight: 400;
+        display: block;
+        max-width: 587px;
+        margin: 0 auto;
+    }
+}
+}
+@media (min-width: 1024px){
+    .top-slider{
+        &__item{
+            min-height: 618px;
+        }
+        &__titile{
+            padding-top: 101px;
+            font-size: 84px; 
+            line-height: 84px;
+            letter-spacing: 2px;
+            max-width: 750px;
+        }
+        .slick-dots{
+            bottom: 80px;
+        }
+    }
+    }
+    @media (min-width: 1440px){
+        .top-slider{
+            &__item{
+                min-height: 668px;
+            }
+            &__titile{
+                padding-top: 107px;
+                font-size: 96px; 
+                line-height: 96px;
+                letter-spacing: 2px;
+                max-width: 865;
+            }
+            &__text{
+                font-size: 24px;
+                line-height: 26px;
+                max-width: 886px;
+            }
+        }
+        }
 
     
