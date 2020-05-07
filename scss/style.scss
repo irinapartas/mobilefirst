@@ -9,10 +9,35 @@ html {
         box-sizing: inherit;
     }
 
-
     body {
         min-width: 320px;
         overflow-x: hidden;
+    }
+    .container{
+        padding: 0 20px;
+    }
+
+    @media (min-width: 640px){
+        .container {
+    padding: 0 30px;
+        }
+    }
+    @media (min-width: 768px){
+        .container {
+    padding: 0 40px;
+        }
+    }
+    @media (min-width: 1024){
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+    }
+    @media (min-width: 1024){
+        .container {
+            max-width: 1320px;
+        }
     }
 
     .header {
@@ -25,21 +50,30 @@ html {
         }
     }
 
+    @media (min-width: 640px){
+        .header{
+            &__inner{
+                min-height: 100px;
+            }
+
+        }
+    }
+
     .logo__link{
         margin-left: 8px;
 }
 
-@media (min-width: 800px){
-    body{
-        background-color: #fff;
-    }
+@media (min-width: 640px){
+   .logo__link{
+       margin-left: 14px;
+   }  
 }
 
-@media (min-width: 1000px){
-    body{
-        background-color: #000;
-    }
-}
+@media (min-width: 640px){
+    .logo__link{
+        margin-left: 0px;
+    }  
+ }
 
 .menu__btn{
 width: 40px;
@@ -57,7 +91,7 @@ position: relative;
     position: absolute;
     top: 15px;
     left: 15px;
-    box-shadow: 0 4px 0 0 $accent, 0 8px 0 0;
+    box-shadow: 0 4px 0 0 $accent, 0 8px 0 0 $accent;
 }
 
 }
