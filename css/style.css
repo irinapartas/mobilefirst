@@ -1,3 +1,8 @@
+.call__titile, .call__btn {
+  font-family: "Roboto-Medium";
+  font-weight: 500;
+}
+
 @font-face {
   font-family: "Roboto-Medium";
   font-weight: 500;
@@ -59,6 +64,14 @@ li {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+button {
+  padding: 0;
+}
+
+p {
+  margin: 0;
 }
 
 body {
@@ -200,6 +213,27 @@ body {
   padding: 36px 0 28px;
   max-width: 243px;
   margin: 0 auto;
+  position: absolute;
+}
+
+.top-slider__titile::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 8px;
+  width: 61px;
+  margin: 0 auto;
+  background-color: #4a4a4a;
+}
+
+.top-slider__text {
+  display: none;
+}
+
+.top-slider__btn {
+  display: none;
 }
 
 .top-slider .slick-dots {
@@ -217,6 +251,11 @@ body {
   right: 0;
 }
 
+.top-slider .slick-dots .slick-active {
+  background-color: transparent;
+  border: 1px solid #476e40;
+}
+
 .top-slider .slick-dots button {
   font-size: 0;
   border: none;
@@ -227,4 +266,189 @@ body {
   -webkit-border-radius: 50%;
           border-radius: 50%;
   margin: 0 10px;
+}
+
+@media (min-width: 640px) {
+  .top-slider__item {
+    min-height: 386px;
+  }
+  .top-slider__title {
+    font-size: 60px;
+    line-height: 60px;
+    padding: 50px 0 15px;
+    margin: 0 auto 30px;
+    max-width: 520px;
+  }
+  .top-slider__btn {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0 auto 113px;
+    font-size: 18px;
+    background-color: #2b4074;
+    color: #F9F6E5;
+    padding: 16px 45px;
+    border: none;
+    -webkit-border-radius: 3px;
+            border-radius: 3px;
+  }
+  .top-slider .slick-dots {
+    bottom: 50px;
+  }
+  .top-slider .slick-arrow {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border: none;
+    right: 0;
+    z-index: 5;
+  }
+  .top-slider .slick-prev {
+    background-color: #2b4074;
+    top: -webkit-calc(50% - 56px);
+    top: calc(50% - 56px);
+  }
+  .top-slider .slick-next {
+    background-color: #F9F6E5;
+    bottom: -webkit-calc(50% - 56px);
+    bottom: calc(50% - 56px);
+  }
+}
+
+@media (min-width: 768px) {
+  .top-slider__item {
+    min-height: 465px;
+  }
+  .top-slider__titile {
+    padding: 87px 0 0;
+    margin: 0 auto 0;
+    max-width: 520px;
+  }
+  .top-slider__titile::after {
+    display: none;
+  }
+  .top-slider__text {
+    padding: 25px 0 32px;
+    font-family: "RobotoCondensed-Regular";
+    line-height: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+    max-width: 587px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .top-slider__item {
+    min-height: 618px;
+  }
+  .top-slider__titile {
+    padding-top: 101px;
+    font-size: 84px;
+    line-height: 84px;
+    letter-spacing: 2px;
+    max-width: 750px;
+  }
+  .top-slider .slick-dots {
+    bottom: 80px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .top-slider__item {
+    min-height: 668px;
+  }
+  .top-slider__titile {
+    padding-top: 107px;
+    font-size: 96px;
+    line-height: 96px;
+    letter-spacing: 2px;
+    max-width: 865;
+  }
+  .top-slider__text {
+    font-size: 24px;
+    line-height: 26px;
+    max-width: 886px;
+  }
+  .top-slider .slick-arrow {
+    width: 70px;
+    height: 70px;
+  }
+  .top-slider .slick-prev {
+    top: -webkit-calc(50% - 70px);
+    top: calc(50% - 70px);
+  }
+  .top-slider .slick-next {
+    bottom: -webkit-calc(50% - 70px);
+    bottom: calc(50% - 70px);
+  }
+}
+
+.call {
+  background-color: #2b4074;
+  padding: 40px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.call__titile {
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+
+.call__text {
+  margin-bottom: 40px;
+}
+
+.call__btn {
+  padding: 16px 15px;
+  background-color: #F9F6E5;
+  color: #2b4074;
+  font-size: 18px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  border: none;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .call {
+    text-align: left;
+  }
+  .call__inner {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .call__box {
+    max-width: 427px;
+  }
+  .call__text {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1024) {
+  .call__box {
+    max-width: 695px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .call__inner {
+    padding: 0 80px;
+  }
+  .call__box {
+    max-width: 796px;
+  }
 }
